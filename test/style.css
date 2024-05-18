@@ -1,0 +1,31 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.parallax {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax-bg {
+  background-image: url('./ima.png'); /* Replace with your background image */
+  background-size: cover;
+  background-position: center;
+  height: 200vh; /* Adjust to your content height */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}

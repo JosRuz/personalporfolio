@@ -156,9 +156,14 @@ h2{
     margin-top: 2rem;
   }
 
+#secimg{
+  width: inherit;
+  align-self: center;
+}
+
 #reconwall{
   overflow: hidden;
-  height: fit-content;
+  height: 1080px;
   width: 100%;
   z-index: 100;
 }

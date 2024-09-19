@@ -1,25 +1,117 @@
-.parallax {
-    perspective: 1px;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
+body, html {
+  height: 100%; /* Make the page tall enough to scroll */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
   }
-  .parallax__layer {
+
+/* Background parallax */
+.parallax-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('./res/BGmuchachos.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+/* Foreground image parallax */
+.parallax-foreground {
+  position: relative;
+  height: 100vh;
+  background-image: url('./res/FGmuchachos.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+  width: 100%;
+}
+
+/* Slower scrolling image */
+.parallax-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: 100%; /* Set image size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .section {
+    transform-origin: center top;
+    transform: scaleY(calc(1 - var(--scale)));
+  }
+  
+  .section > * {
+    transform-origin: center top;
+    transform: scaleY(calc(1 / (1 - var(--scale))));
+  }
+  
+  .image-container {
+    position: sticky;
+    top: 0;
+    width: 100%; /* Change from 100vw to 100% */
+    height: 100vh;
+    z-index: -2;
+  }
+  
+  
+  .image-container img {
+    display: block;
     position: absolute;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
-  }
-  .pllx_img{
     width: 100%;
+    height: 100%;
+    object-fit: cover; /* This is fine as is */
   }
-  .parallax__layer--base {
-    transform: translateZ(0);
+
+button{
+    position: relative;
+    top: -15vw;
+    left: 26vw;
+    width: fit-content;
+    background-color: rgba(0,0,0,0.1);
+    color: white;
+    border: 2px solid white;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    cursor: pointer;
+}
+a{
+    color: antiquewhite;
+}
+
+.wide-image-section {
+    position: relative;
+    width: 100%; /* Full width of the viewport */
+    height: auto; /* Let the height adjust naturally based on the image */
+    padding: 0;
+    margin: 0;
   }
-  .parallax__layer--middle {
-    transform: translateZ(-1px) scale(2);
+  
+  .wide-image-container {
+    width: 100%; /* Full width */
+    height: auto; /* Auto height based on image ratio */
   }
-  .parallax__layer--back {
-    transform: translateZ(-2px) scale(3);
+  
+  .wide-image-container img {
+    display: block;
+    width: 100%; /* Make it fit the width of the container */
+    height: auto; /* Keep the original aspect ratio */
+    object-fit: contain; /* Ensure the image is not stretched */
   }

@@ -3,29 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Parallax Effect</title>
     <link rel="stylesheet" href="./style.css">
-    <title>Bebbie & Josafat</title>
-        
-    </style>
 </head>
 <body>
 
-    <div class="parallax">
-        <div class="parallax__layer parallax__layer--back">
-            <img class="pllx_img" src="./res/BGmuchachos.png" alt="">
-        </div>
-        <div class="parallax__layer parallax__layer--middle">
-            <img class="pllx_img" src="./res/titulo2.png" alt="">
-        </div>
-        <div class="parallax__layer parallax__layer--base">
-            <img class="pllx_img" src="./res/FGmuchachos.png" alt="">
-        </div>
+    <div class="parallax-section">
+        <div class="parallax-background"></div>
+        <div class="parallax-foreground"></div>
+        <img src="./res/titulo2.png" class="parallax-image" alt="Your Image" />
     </div>
 
-    <div>
-        
-    </div>
-    
-  
+    <section class="section">
+        <figure class="image-container">
+            <img src="./res/provicional1.png" alt="">
+        </figure>
+    </section>
+
+    <section class="section">
+        <figure class="image-container">
+            <img src="./res/placeholder2.png" alt="">
+        </figure>
+        <a href="https://maps.app.goo.gl/ApT2XMAPTvKwzCyb6" target="_blank"><button>Ver mapa</button></a>
+    </section>
+
+    <section class="section">
+        <figure class="image-container">
+            <img src="./res/placeholder3.png" alt="">
+        </figure>
+    </section>
+
+    <section class="wide-image-section">
+        <figure class="wide-image-container">
+            <img src="./res/placeholder4.png" alt="">
+        </figure>
+    </section>
+
 </body>
+<script src="./script.js"></script>
 </html>

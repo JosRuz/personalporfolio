@@ -69,6 +69,7 @@ figure {
   .section {
     transform-origin: center top;
     transform: scaleY(calc(1 - var(--scale)));
+    background-color: antiquewhite;
   }
   
   .section > * {
@@ -274,4 +275,169 @@ a{
 
 #countdown span {
   margin: 0 5px; /* Space between the timer segments */
+}
+
+/*Ubicacion ubicacion*/
+.location-section {
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+  bottom: 30px;
+}
+
+.location-title {
+  font-family: 'Dancing Script', cursive; /* Match previous font style */
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.location-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  color: #444;
+  text-transform: uppercase;
+}
+
+.location-map img {
+  width: 100%;
+  max-width: 600px;
+  height: auto; /* Preserve aspect ratio */
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.map-button {
+  margin-top: 20px;
+}
+
+.map-button button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.map-button button:hover {
+  background-color: #666;
+}
+
+/* Carousel container */
+.carousel-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden; /* Hides the images that slide out of view */
+}
+
+/* The carousel itself (the strip of images) */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth sliding */
+}
+
+/* Images inside the carousel */
+.carousel img {
+  width: 100%; /* Ensures images fill the container */
+  height: auto;
+  flex: 0 0 100%; /* Each image takes full width of the container */
+}
+
+/* Previous & next buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+.rsvp-section {
+  text-align: center;
+  padding: 30px;
+  background-color: #f1eace;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.rsvp-section h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 1.2rem;
+  display: block;
+  margin: 10px 0;
+}
+
+input[type="text"], input[type="email"], input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+input[type="submit"] {
+  background-color: #5a9;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #468c77;
+}
+
+#form-message {
+  color: green;
+  font-size: 1.5rem;
+  margin-top: 20px;
 }

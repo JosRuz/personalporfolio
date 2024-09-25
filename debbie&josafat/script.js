@@ -35,3 +35,52 @@ var countdownFunction = setInterval(function() {
     document.getElementById("countdown").innerHTML = "The Wedding Has Started!";
   }
 }, 1000);
+
+
+let currentSlide = 0;
+
+function showSlide(index) {
+  const carousel = document.querySelector('.carousel');
+  const totalSlides = document.querySelectorAll('.carousel img').length;
+
+  // Ensure the slide index wraps around
+  if (index >= totalSlides) {
+    currentSlide = 0;
+  } else if (index < 0) {
+    currentSlide = totalSlides - 1;
+  } else {
+    currentSlide = index;
+  }
+
+  // Calculate the offset for sliding
+  const offset = -currentSlide * 100;
+  carousel.style.transform = `translateX(${offset}%)`;
+  const dots = document.querySelectorAll('.dot');
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[currentSlide].classList.add('active');
+
+}
+
+function nextSlide() {
+  showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+  showSlide(currentSlide - 1);
+}
+
+// Optional: Auto-slide every 5 seconds
+setInterval(() => {
+  nextSlide();
+}, 5000);
+
+let submitted = false;
+
+function formSubmitHandler() {
+  if (submitted) {
+    document.getElementById("form-message").style.display = "block";
+    document.getElementById("custom-form").style.display = "none";
+  }
+}
+
+document.getElementById("custom-form").addEventListener("submit", formSubmitHandler);

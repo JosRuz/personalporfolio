@@ -20,7 +20,19 @@
     </section>
 
     <section class="section" id="carrusell">
-
+        <div class="carousel-container">
+            <div class="carousel">
+              <img src="./res/beso.jpeg" alt="Image 1">
+              <img src="./res/manos.jpeg" alt="Image 2">
+              <img src="./res/columpios.jpeg" alt="Image 3">
+            </div>
+          </div>   
+          <div class="carousel-dots">
+            <span class="dot" onclick="showSlide(0)"></span>
+            <span class="dot" onclick="showSlide(1)"></span>
+            <span class="dot" onclick="showSlide(2)"></span>
+          </div>
+                 
     </section>
 
     <section class="section" id="fecha">
@@ -29,9 +41,6 @@
         </figure>
         <div id="left_side_image">
             <img src="./res/decoracion/flor1.png", alt="flor1">
-        </div>
-        <div id="right_side_image">
-            <img src="./res/decoracion/flor2.png", alt="flor2">
         </div>
 
         <section class="wedding-date-section">
@@ -47,6 +56,10 @@
             </div>
         </section>
 
+        <div id="right_side_image">
+            <img src="./res/decoracion/flor2.png", alt="flor2">
+        </div>
+
         <section class="countdown-section">
             <div id="countdown">
               <span id="days"></span>d : 
@@ -58,10 +71,17 @@
     </section>
 
     <section class="section" id="lugar">
-        <figure class="image-container">
-            <img src="./res/placeholder2.png" alt="">
-        </figure>
-        <a href="https://maps.app.goo.gl/ApT2XMAPTvKwzCyb6" target="_blank"><button>Ver mapa</button></a>
+        <section class="location-section">
+            <h2 class="location-title">Acompañanos en</h2>
+            <p class="location-name">Ixtapa Zihuatanejo</p>
+            <figure class="location-map">
+              <img src="./res/BGixtapa.jpg" alt="Map to the wedding location">
+            </figure>
+            <a href="https://maps.google.com/?q=Ixtapa+Zihuatanejo" class="map-button" target="_blank">
+              <button>Ver mapa</button>
+            </a>
+          </section>
+          
     </section>
 
     <section class="section" id="paquetes">
@@ -80,14 +100,28 @@
 
     </section>
 
-    <section class="wide-image-section">
-        <figure class="wide-image-container">
-            <img src="./res/placeholder4.png" alt="">
-        </figure>
-    </section>
-
     <section class="section" id="confirmar">
+        <div class="rsvp-section">
+            <h2>Confirma tu asistencia</h2>
+            <form id="custom-form" action="https://docs.google.com/forms/d/e/1FAIpQLSdGZkmNv7_mSZT8ckNRRRgr-_sRRrsXgHCxbxB-_QWJxmrZLw/viewform?embedded=true" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+              <label for="name">Nombre completo:</label>
+              <input type="text" id="name" name="entry.1655363051" required>
+          
+              <label for="number">Numero de entradas:</label>
+              <input type="number" id="numero" name="entry.55230878" required>
 
+              <label for="email">Correo electrónico:</label>
+              <input type="email" id="email" name="entry.2147208138" required>
+              
+              <label for="palabras">Unas palabras para los novios:</label>
+              <input type="text" id="name" name="entry.506014323" required>
+              <input type="submit" value="Confirmar">
+            </form>
+          
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+            <div id="form-message" style="display: none;">Gracias por confirmar!</div>
+          </div>
+          
 
     </section>
 

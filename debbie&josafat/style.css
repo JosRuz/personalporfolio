@@ -115,3 +115,62 @@ a{
     height: auto; /* Keep the original aspect ratio */
     object-fit: contain; /* Ensure the image is not stretched */
   }
+
+#versiculo{
+  background-color: antiquewhite;
+  object-fit: fill;
+}
+
+#texto_versiculo{
+  color: rgb(94, 72, 46);
+  font-family:'Trebuchet MS';
+  text-align: center;
+  font-size: large;
+}
+
+#left_side_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+#right_side_image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+.content {
+  position: relative;
+  margin: -50vh auto 0;
+  padding: var(--space);
+  max-width: 55ch;
+  width: calc(100% - var(--space));
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.content #cvbtn{
+  width: fit-content;
+    background-color: rgba(0,0,0,0.1);
+    color: white;
+    border: 2px solid white;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    cursor: pointer;
+}
+
+.content a{
+    color: #fff;
+}
+  
+  .content > * + * {
+    margin-top: 2rem;
+  }
+
+#dia{
+  font-size: large;
+}

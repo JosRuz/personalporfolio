@@ -70,12 +70,24 @@ figure {
     transform-origin: center top;
     transform: scaleY(calc(1 - var(--scale)));
     background-color: antiquewhite;
-  }
+    margin: 0;
+    padding: 0;
+}
+
   
-  .section > * {
-    transform-origin: center top;
-    transform: scaleY(calc(1 / (1 - var(--scale))));
-  }
+.section > * {
+  transform-origin: center top;
+  transform: scaleY(calc(1 / (1 - var(--scale))));
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.section-title, .section > p {
+  line-height: 1.2; /* or adjust to your needs */
+  margin-bottom: 0;
+}
+
+
   
   .image-container {
     position: sticky;
@@ -133,14 +145,14 @@ a{
   }
 
 #versiculo{
-  background-color: antiquewhite;
+  background-color: #e6cda4;
   object-fit: fill;
   padding: 10%;
 }
 
 #texto_versiculo{
-  color: rgb(94, 72, 46);
-  font-family:'Trebuchet MS';
+  color: #99886d;
+  font-family:'Dancing Script', cursive;
   text-align: center;
   font-size: large;
 }
@@ -152,9 +164,23 @@ a{
   height: 100%;
 }
 
-#right_side_image {
+#left_side_image img{
   position: absolute;
   top: 0;
+  left: 0;
+  height: 100%;
+}
+
+#right_side_image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+}
+
+#right_side_image img{
+  position: absolute;
+  bottom: 0;
   right: 0;
   height: 100%;
 }
@@ -195,8 +221,7 @@ a{
 /* Section Layout */
 .wedding-date-section {
   text-align: center;
-  top: 0px;
-  bottom: 20px;
+  top: 0;
   font-family: 'Georgia', serif; /* Default font, can be customized */
   max-width: 600px;
   margin: 0 auto;
@@ -279,6 +304,7 @@ a{
 
 /*Ubicacion ubicacion*/
 .location-section {
+  background-color: #b2c4cf;
   text-align: center;
   padding: 20px;
   margin: 0 auto;
@@ -393,7 +419,7 @@ a{
 .rsvp-section {
   text-align: center;
   padding: 30px;
-  background-color: #f1eace;
+  background-color: #ebe1d7;
   border-radius: 10px;
   width: 100%;
   max-width: 600px;
@@ -440,4 +466,79 @@ input[type="submit"]:hover {
   color: green;
   font-size: 1.5rem;
   margin-top: 20px;
+}
+
+/* Wishlist section container */
+.wishlist-showcase {
+  padding: 20px;
+  background-image: url('./res/BGsliding.png');
+  text-align: center;
+}
+
+/* Title and button */
+.wishlist-title {
+  font-family: 'Cursive', sans-serif;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.wishlist-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #dab790;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.wishlist-button:hover {
+  background-color: #be907c;
+}
+
+/* Slider styling */
+.wishlist-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.wishlist-cards {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  animation: slide 20s linear infinite;
+}
+
+.wishlist-card {
+  flex: 0 0 250px; /* Width of each card */
+  margin-right: 15px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.wishlist-card img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.wishlist-card h3 {
+  font-size: 1.2rem;
+}
+
+/* Infinite slide animation */
+@keyframes slide {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-495%);
+  }
 }

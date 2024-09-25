@@ -542,3 +542,29 @@ input[type="submit"]:hover {
       transform: translateX(-495%);
   }
 }
+
+.dresscode-section {
+  background-color: #f9f5f0; /* Soft, elegant background */
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px; /* Soft rounded corners */
+}
+
+.dresscode-title {
+  font-family: 'Serif', serif; /* Formal font */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color:  #333;
+}
+
+.dresscode-details {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.dresscode-note {
+  font-size: 1.2rem;
+  color: #777;
+  margin-top: 0.5rem;
+}

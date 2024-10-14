@@ -232,20 +232,20 @@ a{
   font-family: 'Dancing Script', cursive; /* Use a nice, flowy script font */
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #333;
+  color: #ffffff;
 }
 
 /* Wedding Day */
 .wedding-day {
   font-size: 1.5rem;
   font-weight: 400;
-  color: #555;
+  color: #ffffff;
 }
 
 /* Horizontal Line */
 .line {
   border: none;
-  border-top: 1px solid #333;
+  border-top: 3px solid #ffffff;
   width: 60%;
   margin: 10px auto;
 }
@@ -254,7 +254,7 @@ a{
 .wedding-number {
   font-size: 4rem;
   font-weight: 700; /* Bold */
-  color: #333;
+  color: #ffffff;
   margin: 0;
 }
 
@@ -262,14 +262,14 @@ a{
 .wedding-month {
   font-size: 1.2rem;
   font-weight: 300; /* Thinner font */
-  color: #777;
+  color: #ffffff;
 }
 
 /* Time of the Wedding */
 .wedding-time {
   font-size: 1.5rem;
   font-weight: 400;
-  color: #333;
+  color: #ffffff;
 }
 
 /* Location */
@@ -277,7 +277,7 @@ a{
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 0.1rem; /* Slightly spaced out text for a wide font effect */
-  color: #444;
+  color: #ffffff;
   text-transform: uppercase;
   margin-top: 20px;
 }

@@ -352,6 +352,21 @@ a{
   background-color: #666;
 }
 
+.btn-download {
+  display: inline-block;
+  background-color: #559769; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.btn-download:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
 /* Carousel container */
 .carousel-container {
   position: relative;
@@ -548,6 +563,9 @@ input[type="submit"]:hover {
   padding: 2rem;
   text-align: center;
   border-radius: 10px; /* Soft rounded corners */
+}
+.dresscode-section img{
+  width: 100%;
 }
 
 .dresscode-title {
